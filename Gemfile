@@ -7,6 +7,8 @@ gem 'devise'
 
 gem 'haml', :git => 'git://github.com/nex3/haml.git'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+
+gem 'jquery-rails'
 group :assets do
   gem 'sass-rails', '~> 3.1.0.rc'
   gem 'coffee-rails', '~> 3.1.0.rc'
@@ -17,10 +19,7 @@ group :development do
   gem 'nifty-generators'
 end
 
-gem 'jquery-rails'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'watchr'
+end
